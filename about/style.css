@@ -1,0 +1,361 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.body{
+    overflow-x: hidden;
+}
+.container{
+    padding: 0 5%;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.active{
+    color: crimson;
+    font-weight: bold;
+}
+/* scrollbar */
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(252, 220, 226);
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(245, 177, 191);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(255, 167, 185);
+}
+::-webkit-scrollbar-thumb:active{
+    background-color: rgb(248, 119, 145);
+}
+
+/* selection */
+::selection{
+    background: crimson;
+    color: #fff;
+}
+
+
+
+/* header */
+header{
+    width: 100%;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 1);
+    filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.336));
+    z-index: 1;
+
+}
+header .logo{
+    padding: 5px;
+}
+header nav {
+    display: flex;
+}
+header nav li{
+    list-style: none;
+    padding: 10px;
+}
+header nav li a{
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-size: 25px;
+    transition: all 0.3s ease;
+    color: #111;
+}
+
+header nav li a:hover{
+    color: crimson;
+}
+
+/* main background */
+
+.main-background {
+    background: url(bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    text-align: center;
+
+}
+.main-background h1{
+    padding: 10vw;
+    font-size: 4.5vw;
+    text-transform: uppercase;
+    color: #fff;
+}
+.main-background button{
+    padding: 10px 40px;
+    background-color: crimson;
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    transition: all .3s ease;
+}
+.main-background button:hover{
+    padding: 10px 50px;
+}
+.main-background button a{
+    padding: 10px 20px;
+    color: #fff;
+    font-weight:bold;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: capitalize;
+
+}
+
+header input {
+    position: absolute;
+   display: none;
+}
+header label {
+    float: end;
+    position: absolute;
+    right: 0;
+    padding: 0 20px;
+}
+header label img{
+    margin: 5px;
+    width: 20px;
+}.check-in{
+    display: none;
+}
+/* about */
+
+.about-1{
+    width: 100%;
+    padding: 40px 0;
+}
+.about-1 .container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.about-1 .part-1{
+    width: 48%;
+}
+.about-1 .part-1 h1{
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 4.3vw;
+}
+.about-1 .part-1 h1::before{
+    content: " ";
+    position: absolute;
+    width: 90px;
+    height: 3px;
+    bottom: 0;
+    background-color: crimson;
+}
+.about-1 .part-1 p{
+    margin: 10px 0;
+    padding:15px 5px ;
+    text-align: justify;
+    font-size: 20px;
+    border-left: 4px solid rgba(0, 0, 0, 0.129);
+    /* box-shadow: -5px 0px 5px rgba(0, 0, 0, 0.193); */
+}
+.about-1 .part-2{
+    text-align: right;
+    width: 48%;
+}
+.about-1 .part-2 img{
+    padding: 0 20px;
+    width: 470px;
+}
+.about-2{
+    margin-bottom: 20px;
+}
+.about-2  h1{
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 4.3vw;
+}
+.about-2 h1::before{
+    content: " ";
+    position: absolute;
+    width: 120px;
+    height: 3px;
+    bottom: 0;
+    background-color: crimson;
+}
+.about-2 .para{
+    padding: 15px 0;
+    border-left: 4px solid rgba(0, 0, 0, 0.129);
+}
+.about-2  p{
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: justify;
+}
+
+
+ /* footer */
+
+ footer{
+     background-color: #222;
+     color: #fff;
+     text-align: center;
+     padding: 10px;
+ }
+ footer h1{
+     font-size: 15px;
+     text-transform: capitalize;
+     
+ }
+ i img {
+     margin: 0 5px;
+     width: 15px;
+ }
+
+ 
+ /* responsive media query */
+
+ @media (max-width: 980px){
+    .main-background{
+        padding: 0px;
+    }
+    .main-background h1{
+        width: 100%;
+        padding:20vw ;
+    }
+    header nav{
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        top: 0;
+        left: -100%;
+        background-color: #333;
+        transition: all 0.3s ease;
+
+   }
+    header nav li{
+        padding: 30px 0;
+   }
+    header nav li a{
+        color: #fff;
+   }
+    header .check-in{
+       display: block;
+       z-index: 10;
+   }
+    header .check-in:active{
+        background-color: rgba(61, 78, 124,0.2);
+   }
+    header #check-in:checked~nav{
+        left: 0;
+   }
+    
+}
+
+@media (max-width: 770px){
+    .main-background{
+        padding: 0px;
+    }
+    .main-background h1{
+        padding:20vw;
+    }
+    .about .title h1{
+        font-size: 20px;
+        padding: 15px;
+    }
+    .about-1 .container{
+        flex-direction: column;
+    }
+    .about-1 .container .part-1{
+        width: 100%;
+    }
+    .about-1 .container .part-2{
+        width: 100%;
+        text-align: center;
+    }
+
+}
+@media (max-width:680px){
+     
+   .main-background{
+    padding: 0px;
+}
+.main-background h1{
+    padding:20vw;
+}
+}
+@media (max-width: 580px){
+    .main-background{
+        padding: 0px;
+    }
+    .main-background h1{
+        padding:20vw;
+    }
+    .about .title h1{
+        font-size: 17px;
+        padding: 15px;
+    }
+    
+    .about-1 .container .part-2 img{
+        width: 100%;
+    }
+    
+.about-1 .part-1 p{
+    font-size: 10px;
+}
+.about-2 .para p{
+    font-size: 10px;
+}
+    footer h1{
+        font-size: 10px;
+    }
+   
+}
+@media (max-width: 480px){
+    .main-background{
+        padding: 0px;
+    }
+    .main-background h1{
+        padding:20vw;
+    }
+    .courses .title h1{
+        font-size: 15px;
+        padding: 15px;
+    }
+   
+}
+@media (max-width: 320px){
+   .main-background{
+       padding: 0px;
+   }
+   .main-background h1{
+       padding:20vw;
+   }
+    .main-background button{
+        padding: 5px 10px;
+    }
+    .main-background button a{
+        font-size: 10px;
+    }
+    .courses .title h1{
+        font-size: 13px;
+        padding: 15px;
+    }
+   
+}

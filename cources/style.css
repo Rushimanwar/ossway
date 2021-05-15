@@ -1,0 +1,357 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    padding: 0 5%;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.active{
+    color: crimson;
+    font-weight: bold;
+}
+/* scrollbar */
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(252, 220, 226);
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(245, 177, 191);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(255, 167, 185);
+}
+::-webkit-scrollbar-thumb:active{
+    background-color: rgb(248, 119, 145);
+}
+
+/* selection */
+::selection{
+    background: crimson;
+    color: #fff;
+}
+
+
+
+/* header */
+header{
+    width: 100%;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 1);
+    filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.336));
+    z-index: 1;
+
+}
+header .logo{
+    padding: 5px;
+}
+header nav {
+    display: flex;
+}
+header nav li{
+    list-style: none;
+    padding: 10px;
+}
+header nav li a{
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-size: 25px;
+    transition: all 0.3s ease;
+    color: #111;
+}
+
+header nav li a:hover{
+    color: crimson;
+}
+
+/* main background */
+
+.main-background h1{
+    background: url(bg.jpg);
+    background-size: 100vw 75vh;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 210px;
+    font-size: 55px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+
+}
+header input {
+    position: absolute;
+   display: none;
+}
+header label {
+    float: end;
+    position: absolute;
+    right: 0;
+    padding: 0 20px;
+}
+header label img{
+    margin: 5px;
+    width: 20px;
+}.check-in{
+    display: none;
+}
+
+/* courses */
+
+.courses{
+    width: 100%;
+    padding: 0 5%;
+}
+.courses .title{
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+.courses .title h1::after{
+    content: " \2663 ";
+    position: absolute;
+    width: 40px;
+    height: 15px;
+    left: 50%;
+    bottom: 0;
+    font-size: 20px;
+    color: crimson;
+    transform: translate(-50%);
+    background-color: rgb(255, 255, 255);
+}
+.courses .title h1::before{
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    background-color: crimson;
+}
+.courses .title h1{
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #111;
+}
+.courses .content{
+    width: 100%;
+}
+.courses .content .box{
+    width: 100%;
+    padding: 10px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.courses .content .box .card{
+    width: 30%;
+    margin: 20px;
+}
+.courses .content .box .card .img{
+    padding-bottom: 10px ;
+    position: relative;
+}
+.courses .content .box .card .img img{
+    width: 100%;
+}
+.courses .content .box .card .download {
+    text-align: center;
+}  button {
+    text-align: center;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid crimson;
+    background-color: crimson;
+    border-radius: 40px;
+    transition: all .3s ease;
+} button:hover{
+    padding: 10px 30px;
+}
+
+ button a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+}
+i img {
+    margin: 0 5px;
+    width: 15px;
+}
+ /* footer */
+
+ footer{
+     background-color: #222;
+     color: #fff;
+     text-align: center;
+     padding: 10px;
+ }
+ footer h1{
+     font-size: 15px;
+     text-transform: capitalize;
+     
+ }
+
+ /* responsive media query */
+
+ @media (max-width: 980px){
+    header nav{
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        top: 0;
+        left: -100%;
+        background-color: #333;
+        transition: all 0.3s ease;
+
+   }
+    header nav li{
+        padding: 30px 0;
+   }
+    header nav li a{
+        color: #fff;
+   }
+    header .check-in{
+       display: block;
+       z-index: 10;
+   }
+    header .check-in:active{
+        background-color: rgba(61, 78, 124,0.2);
+   }
+    header #check-in:checked~nav{
+        left: 0;
+   }
+    
+}
+
+@media (max-width: 770px){
+    .main-background{
+        padding: 0;
+        margin: 0;
+    }
+    .main-background h1{
+        padding: 40%;margin: 0;
+        width: 100%;
+        font-size:30px;
+    }
+    .courses .title h1{
+        font-size: 20px;
+        padding: 15px;
+    }
+    
+    
+.courses .content .box .card{
+    width: 320px;
+}
+.courses .content .box .card .img img{
+    width: 100%;
+}
+}
+@media (max-width:680px){
+     
+.main-background button{
+   padding: 10px;
+}
+.main-background button a{
+   font-size: 15px;
+}
+}
+@media (max-width: 580px){
+   .main-background{
+       padding: 0px;
+   }
+    .main-background h1{
+        font-size:25px;
+    }  
+    .main-background button{
+        padding: 10px;
+    }
+    .main-background button a{
+        font-size: 13px;
+    }
+    .courses .title h1{
+        font-size: 17px;
+        padding: 15px;
+    }
+    footer h1{
+        font-size: 10px;
+    }
+   
+i img {
+    margin: 0 5px;
+    width: 10px;
+}
+}
+@media (max-width: 480px){
+   .main-background{
+   padding: 0px;
+}   
+.main-background button{
+   padding: 0px;
+}
+.main-background button a{
+   font-size: 13px;
+}
+.main-background h1{
+    width: 100%;
+    font-size:20px;
+}
+.courses .title h1{
+    font-size: 15px;
+    padding: 15px;
+}
+   
+}
+@media (max-width: 320px){
+   .main-background{
+       padding: 0px;
+   }
+    .main-background h1{
+        font-size:15px;
+    }  
+    .main-background button{
+        padding: 5px 10px;
+    }
+    .main-background button a{
+        font-size: 10px;
+    }
+    .courses .title h1{
+        font-size: 13px;
+        padding: 15px;
+    }
+   
+}
+@media (max-width:280px){
+    .main-background{
+        margin: 0;padding: 0;
+        width: 100%;
+    }
+    .main-background h1{
+        width: 100%;
+        padding: 40% 40%;
+    }
+    button a{
+        font-size: 8px;
+    }
+    i img {
+        margin: 0 3px;
+        width: 7px;
+    }
+}

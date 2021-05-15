@@ -1,0 +1,459 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: #fff;
+}
+.container{
+    padding: 0 5%;
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.active{
+    color: crimson;
+    font-weight: bold;
+}
+/* scrollbar */
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: rgb(252, 220, 226);
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(245, 177, 191);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: rgb(255, 167, 185);
+}
+::-webkit-scrollbar-thumb:active{
+    background-color: rgb(248, 119, 145);
+}
+
+/* selection */
+::selection{
+    background: crimson;
+    color: #fff;
+}
+
+
+/* header */
+header{
+    width: 100%;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 1);
+    filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.336));
+    z-index: 1;
+
+}
+header .logo{
+    padding: 5px;
+}
+header nav {
+    display: flex;
+}
+header nav li{
+    list-style: none;
+    padding: 10px;
+}
+header nav li a{
+    text-decoration: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-size: 25px;
+    transition: all 0.3s ease;
+    color: #111;
+}
+
+header nav li a:hover{
+    color: crimson;
+}
+
+/* main background */
+
+.main-background {
+    background: url(bg.jpg);
+    background-size: 100vw 90vh;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 200px;
+
+}
+.main-background h1{
+    padding: 60px;
+    font-size: 55px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.main-background button{
+    padding: 10px 40px;
+    background-color: crimson;
+    outline: none;
+    border: none;
+    border-radius: 40px;
+    transition: all .3s ease;
+}
+.main-background button:hover{
+    padding: 10px 50px;
+}
+.main-background button a{
+    padding: 10px 20px;
+    color: #fff;
+    font-weight:bold;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: capitalize;
+
+}
+
+header input {
+    position: absolute;
+   display: none;
+}
+header label {
+    float: end;
+    position: absolute;
+    right: 0;
+    padding: 0 20px;
+}
+header label img{
+    margin: 5px;
+    width: 20px;
+}.check-in{
+    display: none;
+}
+
+/* contact */
+.contact{
+    width: 100%;
+}
+form{
+    padding: 10px 0;
+}
+.name,.num, .email ,.sub ,.dec{
+    padding-top: 20px;
+}
+.name{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.name .input{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.email .input{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.first ,.last{
+    padding-right: 20px;
+}
+label{
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 17px;
+}
+  input{
+    width: 320px;
+    height: 35px;
+    margin-top: 5px ;
+    padding: 5px;
+    outline: none;
+    border-radius: 7px;
+    background-color: rgba(192, 185, 185, 0.116);
+    border: 1px solid rgb(236, 197, 205);
+}
+span{
+    color: crimson;
+}
+.num  input{
+    width: 320px;
+    height: 35px;
+    margin-top: 5px ;
+    padding: 5px;
+    outline: none;
+    border-radius: 7px;
+    border: 1px solid rgb(236, 197, 205);
+}
+.dec textarea{
+    width: 620px;
+    height: 135px;
+    margin-top: 5px ;
+    padding: 5px;
+    resize: none;
+    outline: none;
+    border-radius: 7px;
+    background-color: rgba(192, 185, 185, 0.116);
+    border: 1px solid rgb(236, 197, 205);
+}
+.btn{
+    padding: 10px 0;
+    width: 100%;
+}
+.btn button{
+    padding: 5px 30px;
+    outline: none;
+    border-radius :40px;
+    border: 1px solid crimson;
+    background-color: crimson;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.btn button:hover{
+    color: crimson;
+    background: transparent;
+}
+
+.contact-info{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.info{
+    margin: 10px;
+    padding: 10px;
+    width: calc(100% -100px);
+    color: rgb(254, 255, 254);
+    text-align: center;
+    
+    background-image: url(../images/wall.jpg);
+    background-size: cover;
+}
+
+.info h1{
+    padding:10px 0;
+    font-size: 23px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.info h4{
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.info p{
+    padding: 5px 0;
+    font-size: 17px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.info #nm{
+    padding: 5px 0;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.map{
+    margin: 10px;
+    width: 48%;
+    text-align: center;
+}
+.map img{
+    width: 100%;
+}
+
+ /* footer */
+
+ footer{
+     background-color: #222;
+     color: #fff;
+     text-align: center;
+     padding: 10px;
+ }
+ footer h1{
+     font-size: 15px;
+     text-transform: capitalize;
+     
+ }
+ i img {
+     margin: 0 5px;
+     width: 15px;
+ }
+
+
+ 
+ /* responsive media query */
+
+ @media (max-width: 980px){
+    header nav{
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        top: 0;
+        left: -100%;
+        background-color: #333;
+        transition: all 0.3s ease;
+
+   }
+    header nav li{
+        padding: 30px 0;
+   }
+    header nav li a{
+        color: #fff;
+   }
+    header .check-in{
+       display: block;
+       z-index: 10;
+   }
+    header .check-in:active{
+        background-color: rgba(61, 78, 124,0.2);
+   }
+    header #check-in:checked~nav{
+        left: 0;
+   }
+    
+}
+
+@media (max-width: 770px){
+   .main-background{
+       width: 100%;
+   }
+    .main-background h1{
+        width: 100%;
+        font-size:30px;
+    }
+    .contact .title h1{
+        font-size: 20px;
+        padding: 15px;
+    }
+    
+   .contact-info {
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+    
+   .contact-info .info,.map{
+       width: 100%;
+   }
+}
+@media (max-width:720px){
+    form{
+        width: 100%;
+        padding: 10px;
+        background-color: #fff;
+    }
+    form .name .input{
+        flex-direction: column;
+    }
+    form .input{
+        width: 100%;
+    }
+    form .input input{
+        width: 100%;
+    }
+    .first ,.last{
+        padding-right: 0px;
+    }
+    form .email .input{
+        flex-direction: column;
+    }
+    form .dec textarea{
+        width: 100%;
+    }
+}
+@media (max-width:680px){
+     
+.main-background button{
+   padding: 10px;
+}
+.main-background button a{
+   font-size: 15px;
+}
+}
+@media (max-width: 580px){
+   .main-background{
+       padding: 150px;
+   }
+    .main-background h1{
+        font-size:25px;
+    }  
+    .main-background button{
+        padding: 10px;
+    }
+    .main-background button a{
+        font-size: 13px;
+    }
+    .contact .title h1{
+        font-size: 17px;
+        padding: 15px;
+    }
+    footer h1{
+        font-size: 10px;
+    }
+   
+}
+@media (max-width: 480px){
+   .main-background{
+   padding: 80px;
+}   
+.main-background button{
+   padding: 10px;
+}
+.main-background button a{
+   font-size: 13px;
+}
+    .main-background h1{
+        font-size:25px;
+    }
+    .contact .title h1{
+        font-size: 15px;
+        padding: 15px;
+    }
+   
+}
+@media (max-width: 320px){
+   .main-background{
+       padding: 50px;
+   }
+    .main-background h1{
+        text-align: center;
+        font-size:17px;
+    }  
+    .main-background button{
+        padding: 5px 10px;
+    }
+    .main-background button a{
+        font-size: 10px;
+    }
+    .contact .title h1{
+        font-size: 13px;
+        padding: 15px;
+    }
+   
+}
+@media (max-width: 280px){
+   .main-background{
+       padding: 0px;
+   }
+    .main-background h1{
+        text-align: center;
+        font-size:10px;
+    } 
+    .info h4,.nm{
+        font-size: 7vw;
+    }
+    .info p{
+        font-size: 5vw;
+    }
+}
